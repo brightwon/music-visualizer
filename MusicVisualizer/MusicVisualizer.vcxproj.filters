@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Shader">
+      <UniqueIdentifier>{91b6bf4a-dde7-4a2f-8964-c62fb2eefd9f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Model">
+      <UniqueIdentifier>{4ba7766d-ddd6-491a-aa6a-65ee7280247a}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="MusicVisualizer.cpp" />
+    <ClCompile Include="glad.c" />
+  </ItemGroup>
+</Project>
