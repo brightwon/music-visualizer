@@ -4,12 +4,29 @@
     <Filter Include="Shader">
       <UniqueIdentifier>{91b6bf4a-dde7-4a2f-8964-c62fb2eefd9f}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Model">
+    <Filter Include="Music">
+      <UniqueIdentifier>{05e537fb-fa2b-4e30-a81d-166463245f44}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="3dModel">
       <UniqueIdentifier>{4ba7766d-ddd6-491a-aa6a-65ee7280247a}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="MusicVisualizer.cpp" />
     <ClCompile Include="glad.c" />
+    <ClCompile Include="Shader.cpp">
+      <Filter>Shader</Filter>
+    </ClCompile>
+    <ClCompile Include="MusicManager.cpp">
+      <Filter>Music</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Shader.h">
+      <Filter>Shader</Filter>
+    </ClInclude>
+    <ClInclude Include="MusicManager.h">
+      <Filter>Music</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

@@ -14,8 +14,14 @@ lib/
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
 
-# c files
-*.c
+# c source
+MusicVisualizer/glad.c
+
+# music file
+sample.mp3
+
+# FMOD dll file
+MusicVisualizer/fmod.dll
 
 # Build results
 [Dd]ebug/
