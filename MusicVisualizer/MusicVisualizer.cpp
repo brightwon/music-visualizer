@@ -1,6 +1,6 @@
 #include <glad/glad.h>
 #include <GLFW/glfw3.h>
-#include <fmod/fmod.hpp>
+#include "MusicManager.h"
 
 #include <iostream>
 #include <string>
@@ -8,8 +8,6 @@
 void framebuffer_size_callback(GLFWwindow* window, int width, int height);
 void processInput(GLFWwindow *window);
 
-FMOD_RESULT result;
-FMOD::System *mSystem = NULL;
 
 // settings
 const unsigned int SCR_WIDTH = 800;
@@ -34,14 +32,10 @@ const char *fragmentShaderSource = "#version 460 core\n"
 
 int main()
 {
-	result = FMOD::System_Create(&mSystem);
-
-	FMOD::Sound * SoundFile;
-	mSystem->createSound("../sample.mp3", FMOD_DEFAULT, NULL, &SoundFile);
-
-	result = mSystem->playSound(SoundFile, NULL, false, NULL);
+	MusicManager *player = new MusicManager;
+	player->loadSound("../sample.mp3");
+	player->playSound();
 	
-
 	// glfw: initialize and configure
 	// ------------------------------
 	glfwInit();
@@ -183,6 +177,7 @@ int main()
 	// glfw: terminate, clearing all previously allocated GLFW resources.
 	// ------------------------------------------------------------------
 	glfwTerminate();
+	delete player;
 	return 0;
 }
 

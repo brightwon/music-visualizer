@@ -20,8 +20,8 @@ MusicVisualizer/glad.c
 # music file
 sample.mp3
 
-# FMOD dll file
-MusicVisualizer/fmod.dll
+# dll file
+*.dll
 
 # Build results
 [Dd]ebug/
