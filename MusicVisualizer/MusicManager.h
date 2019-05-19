@@ -1,22 +1,34 @@
 #ifndef MUSICMANAGER_H
 #define MUSICMANAGER_H
 
-#include <string>
 #include <fmod/fmod.hpp>
+#include <fmod/fmod_errors.h>
+
+#include <iostream>
+#include <string>
+#include <vector>
+
+using namespace std;
 
 class MusicManager
 {
 public:
 	MusicManager();
 	~MusicManager();
-	void loadSound(std::string filePath);
-	void playSound();
-	void pauseSound();
+
+	void loadMusic(string filePath);
+	void playMusic();
+	void update();
+	void initSpectrum();
+	float getFrequency();
 
 private:
-	FMOD::System* musicSystem;
-	FMOD::Channel* musicChannel;
-	FMOD::Sound* musicSound;
+	FMOD::System *fmodSystem;
+	FMOD::Channel *channel;
+	FMOD::ChannelGroup *channelGroup;
+	FMOD::Sound *sound;
+	FMOD::DSP *dsp;
+	int windowSize;
 	void init();
 };
 

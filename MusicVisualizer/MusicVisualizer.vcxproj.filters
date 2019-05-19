@@ -7,8 +7,11 @@
     <Filter Include="Music">
       <UniqueIdentifier>{05e537fb-fa2b-4e30-a81d-166463245f44}</UniqueIdentifier>
     </Filter>
-    <Filter Include="3dModel">
+    <Filter Include="Mesh">
       <UniqueIdentifier>{4ba7766d-ddd6-491a-aa6a-65ee7280247a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Model">
+      <UniqueIdentifier>{2dc9b23a-fc2e-4da1-a868-195552dadb93}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -20,6 +23,12 @@
     <ClCompile Include="MusicManager.cpp">
       <Filter>Music</Filter>
     </ClCompile>
+    <ClCompile Include="Mesh.cpp">
+      <Filter>Mesh</Filter>
+    </ClCompile>
+    <ClCompile Include="Model.cpp">
+      <Filter>Model</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Shader.h">
@@ -27,6 +36,12 @@
     </ClInclude>
     <ClInclude Include="MusicManager.h">
       <Filter>Music</Filter>
+    </ClInclude>
+    <ClInclude Include="Mesh.h">
+      <Filter>Mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="Model.h">
+      <Filter>Model</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
