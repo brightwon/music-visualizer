@@ -143,21 +143,19 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="glad.c" />
-    <ClCompile Include="Mesh.cpp" />
-    <ClCompile Include="Model.cpp">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
-    </ClCompile>
     <ClCompile Include="MusicManager.cpp" />
     <ClCompile Include="MusicVisualizer.cpp" />
     <ClCompile Include="Shader.cpp" />
+    <ClCompile Include="Visualizer.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Mesh.h" />
-    <ClInclude Include="Model.h">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
-    </ClInclude>
     <ClInclude Include="MusicManager.h" />
     <ClInclude Include="Shader.h" />
+    <ClInclude Include="Visualizer.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ShaderFragment.glsl" />
+    <None Include="ShaderVertex.glsl" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
