@@ -143,12 +143,14 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="glad.c" />
+    <ClCompile Include="Mesh.cpp" />
     <ClCompile Include="MusicManager.cpp" />
     <ClCompile Include="MusicVisualizer.cpp" />
     <ClCompile Include="Shader.cpp" />
     <ClCompile Include="Visualizer.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Mesh.h" />
     <ClInclude Include="MusicManager.h" />
     <ClInclude Include="Shader.h" />
     <ClInclude Include="Visualizer.h" />

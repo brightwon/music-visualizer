@@ -23,6 +23,9 @@
     <ClCompile Include="Visualizer.cpp">
       <Filter>Visualizer</Filter>
     </ClCompile>
+    <ClCompile Include="Mesh.cpp">
+      <Filter>Visualizer</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Shader.h">
@@ -32,6 +35,9 @@
       <Filter>Music</Filter>
     </ClInclude>
     <ClInclude Include="Visualizer.h">
+      <Filter>Visualizer</Filter>
+    </ClInclude>
+    <ClInclude Include="Mesh.h">
       <Filter>Visualizer</Filter>
     </ClInclude>
   </ItemGroup>
