@@ -39,10 +39,10 @@ void Mesh::setVertices(int index, int barNum) {
 	for (int i = 0; i < 20; i++) {
 		if (i % 5 == 0) {
 			if (xCheck < 2) {
-				this->vertices[i] = -0.9f + ((1.8f / barNum) * index);
+				this->vertices[i] = -0.5f + ((1.0f / barNum) * index);
 				xCheck++;
 			}
-			else this->vertices[i] = -0.9f + ((1.8f / barNum) * (index + 1));
+			else this->vertices[i] = -0.5f + ((1.0f / barNum) * (index + 1));
 		}
 	}
 }

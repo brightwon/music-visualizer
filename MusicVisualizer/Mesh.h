@@ -13,10 +13,10 @@ private:
 	/*  Default mesh data  */
 	float vertices[20] = {
 		// positions          // texture coords
-		-0.9f,  0.2f, 0.0f,  -0.05f,  1.01f, // top left
-		-0.9f, -0.2f, 0.0f,  -0.05f, -0.01f, // bottom left
-		-0.8f, -0.2f, 0.0f,   1.05f, -0.01f, // bottom right
-		-0.8f,  0.2f, 0.0f,   1.05f,  1.01f  // top right
+		-0.5f,  0.2f, 0.0f,  -0.05f,  1.01f, // top left
+		-0.5f, -0.2f, 0.0f,  -0.05f, -0.01f, // bottom left
+		-0.4f, -0.2f, 0.0f,   1.05f, -0.01f, // bottom right
+		-0.4f,  0.2f, 0.0f,   1.05f,  1.01f  // top right
 	};
 
 	unsigned int indices[6] = {
