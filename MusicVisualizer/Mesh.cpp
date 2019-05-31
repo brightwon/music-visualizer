@@ -48,7 +48,9 @@ void Mesh::setVertices(int index, int barNum) {
 }
 
 /* Draw the mesh */
-void Mesh::draw(Shader shader) {
+void Mesh::draw(Shader &shader, float yCoordinate) {
+	shader.setFloat("targetPos", yCoordinate);
+
 	glBindVertexArray(VAO);
 	glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
 

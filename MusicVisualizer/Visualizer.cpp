@@ -42,7 +42,7 @@ void Visualizer::run() {
 	Shader shader = Shader("ShaderVertex.glsl", "ShaderFragment.glsl");
 
 	// create meshes
-	int barNum = 18;
+	int barNum = 10;
 	Mesh *meshes = new Mesh[barNum];
 
 	for (int idx = 0; idx < barNum; idx++) {
@@ -54,7 +54,10 @@ void Visualizer::run() {
 	MusicManager player;
 	player.loadMusic("../sample.mp3");
 	player.playMusic();
-	player.initSpectrum();
+
+	// initialize spectrum
+	int size = player.initSpectrum(12);
+	float *frequencies = new float[size]();
 
 	// render loop
 	while (!glfwWindowShouldClose(window))
@@ -68,8 +71,12 @@ void Visualizer::run() {
 
 		shader.use();
 
+		// get frequency
+		player.getFrequency(frequencies);
+
 		for (int i = 0; i < barNum; i++) {
-			meshes[i].draw(shader);
+			float yCoordinate = frequencies[i];
+			meshes[i].draw(shader, yCoordinate);
 		}
 
 		// glfw: swap buffers and poll IO events (keys pressed/released, mouse moved etc.)
@@ -82,4 +89,5 @@ void Visualizer::run() {
 	glfwTerminate();
 	
 	delete[] meshes;
+	delete[] frequencies;
 }

@@ -32,7 +32,8 @@ public:
 
 	void setupMesh();
 	void setVertices(int index, int barNum);
-	void draw(Shader shader);
+
+	void draw(Shader &shader, float yCoordinate);
 	void loadTexture(const char *path);
 };
 

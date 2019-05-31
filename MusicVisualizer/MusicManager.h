@@ -19,15 +19,17 @@ public:
 	void loadMusic(string filePath);
 	void playMusic();
 	void update();
-	void initSpectrum();
-	float getFrequency();
+
+	int initSpectrum(int maxBars);
+	void getFrequency(float *spectrum);
 
 private:
 	FMOD::System *fmodSystem;
 	FMOD::Channel *channel;
-	FMOD::ChannelGroup *channelGroup;
 	FMOD::Sound *sound;
 	FMOD::DSP *dsp;
+
+	vector<int> numSamplesPerBar;
 	int windowSize;
 	void init();
 };
