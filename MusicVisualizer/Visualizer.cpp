@@ -65,14 +65,23 @@ void Visualizer::run() {
 		// input
 		processInput(window);
 
+		// get frequency
+		player.getFrequency(frequencies);
+
+		float red = 0.02f + (frequencies[1] * 0.9f);
+		float green = 0.4f + (frequencies[1] * 0.2f);
+		float blue = 0.639f + (frequencies[1] * 0.1f);
+
+		// 0.02, 0.4, 0.639 ÁøÇÑ ÆÄ¶û
+		// 0.91, 0.62, 0.729 ºÐÈ«
+		// 0.106, 0.545, 0.722 ¿¬ÇÑ ÆÄ¶û
+		// 0.969, 0.898, 0.616 ³ë¶û
+
 		// render
-		glClearColor(0.0f, 0.2f, 0.3f, 1.0f);
+		glClearColor(red, green, blue, 1.0f);
 		glClear(GL_COLOR_BUFFER_BIT);
 
 		shader.use();
-
-		// get frequency
-		player.getFrequency(frequencies);
 
 		for (int i = 0; i < barNum; i++) {
 			float yCoordinate = frequencies[i];

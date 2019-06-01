@@ -68,7 +68,7 @@ void Mesh::loadTexture(const char *path) {
 	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_BORDER);
 	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_BORDER);
 
-	float borderColor[] = { 0.85f, 0.95f, 1.0f, 1.0f };
+	float borderColor[] = { 0.863f, 0.922f, 0.945f, 1.0f };
 	glTexParameterfv(GL_TEXTURE_2D, GL_TEXTURE_BORDER_COLOR, borderColor);
 
 	// set texture filtering parameters
