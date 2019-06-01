@@ -76,7 +76,8 @@ void Visualizer::run() {
 
 		for (int i = 0; i < barNum; i++) {
 			float yCoordinate = frequencies[i];
-			meshes[i].draw(shader, yCoordinate);
+			float corr = yCoordinate * pow(2, i);
+			meshes[i].draw(shader, corr);
 		}
 
 		// glfw: swap buffers and poll IO events (keys pressed/released, mouse moved etc.)
