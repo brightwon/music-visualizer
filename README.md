@@ -7,7 +7,7 @@ The left side is the low frequency region, and the right side is the high freque
 
 ![demo](./demo.gif)
 
-[Full Video with Music](https://)
+[Video with Music](https://youtu.be/rlNx66UQ0ao)
 
 ## Dependencies
 * GLFW
