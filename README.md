@@ -1,8 +1,7 @@
 # Music Visualizer
-Audio Visualizer with OpenGL  
+Real-Time Audio Visualizer with OpenGL  
 
 Extract frequencies from music files in real time and display them in 10 bars.  
-
 The left side is the low frequency region, and the right side is the high frequency region.
 
 ![demo](./demo.gif)
